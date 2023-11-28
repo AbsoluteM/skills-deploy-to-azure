@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: absolutemskillsdeploytoazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: absolutemskillsdeploytoazure
+  template:
+    metadata:
+      labels:
+        app: absolutemskillsdeploytoazure 
+    spec:
+      containers:
+        - name: absolutemskillsdeploytoazure 
+          image: pro690as2.azurecr.io/absolutemskillsdeploytoazure
+          ports:
+          - containerPort: 8080
